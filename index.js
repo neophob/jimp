@@ -1926,7 +1926,7 @@ function compositeBitmapOverBackground(image){
 }
 
 /**
- * Apply a ordered dithering effect and reduce colorspace to 565
+ * Apply a ordered dithering effect
  * @param (optional) cb a callback for when complete
  * @returns this for chaining of methods
  */
@@ -1948,6 +1948,7 @@ Jimp.prototype.dither565 = function (cb) {
     if (isNodePattern(cb)) return cb.call(this, null, this);
     else return this;
 }
+
 
 // alternative reference
 Jimp.prototype.dither16 = Jimp.prototype.dither565;
